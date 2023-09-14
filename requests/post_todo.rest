@@ -2,6 +2,6 @@ post http://localhost:3000/todos
 Content-Type: application/json
 
 {
-    "text": "Post something with postman",
+    "text": "sdfsdf",
     "done": true
 }

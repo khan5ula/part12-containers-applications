@@ -1,7 +1,7 @@
-PUT http://localhost:3000/todos/65018b0c34dd9799a33b926c
+PUT http://localhost:3000/todos/650305dc01480b7b6f758e9d
 Content-Type: application/json
 
 {
-    "text": "Learn about containers",
+    "text": "Post a new todo",
     "done": true
 }
