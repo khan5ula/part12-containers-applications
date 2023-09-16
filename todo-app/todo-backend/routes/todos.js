@@ -16,7 +16,7 @@ router.post("/", async (req, res) => {
     done: false,
   });
 
-  let todoCount = 0;
+  let todoCount = "1";
   const result = await redis.getAsync("added_todos");
 
   if (result) {
