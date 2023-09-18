@@ -13,6 +13,7 @@ app.use(cors());
 
 app.use(logger("dev"));
 app.use(express.json());
+//app.use(express.static("public"));
 
 app.use("/", indexRouter);
 app.use("/todos", todosRouter);
