@@ -6,6 +6,4 @@ COPY --chown=node:node . .
 
 RUN npm ci
 
-EXPOSE 3000
-
 CMD npm run dev
