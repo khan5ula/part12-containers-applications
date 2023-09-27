@@ -1,12 +1,12 @@
-FROM node:16 AS build-stage
+FROM oven/bun:latest AS build-stage
 
 WORKDIR /usr/src/app
 
 COPY . .
 
-RUN npm install
+RUN bun install
 
-RUN npm run build
+RUN bun run build
 
 FROM nginx:1.20-alpine AS production-stage
 

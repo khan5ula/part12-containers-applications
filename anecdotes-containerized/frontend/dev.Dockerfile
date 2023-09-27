@@ -1,9 +1,9 @@
-FROM node:16
+FROM oven/bun:latest
 
 WORKDIR /usr/src/app
 
 COPY . .
 
-RUN npm install
+RUN bun install
 
-CMD npm run dev
+CMD bun run dev
