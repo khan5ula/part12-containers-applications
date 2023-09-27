@@ -4,6 +4,8 @@ WORKDIR /usr/src/app
 
 COPY . .
 
+ENV VITE_REACT_APP_BACKEND_URL="http://localhost:8080/api"
+
 RUN bun install
 
 RUN bun run build

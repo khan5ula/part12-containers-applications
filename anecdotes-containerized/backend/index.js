@@ -53,17 +53,17 @@ let anecdotes = [
   },
 ]
 
-app.get('/api/anecdotes', (req, res) => {
+app.get('/anecdotes', (req, res) => {
   res.json(anecdotes)
 })
 
-app.get('/api/anecdotes/:id', (request, response) => {
+app.get('/anecdotes/:id', (request, response) => {
   const id = request.params.id
   const anecdote = anecdotes.find((anecdote) => anecdote.id === id)
   response.json(anecdote)
 })
 
-app.delete('/api/anecdotes/:id', (request, response) => {
+app.delete('/anecdotes/:id', (request, response) => {
   const id = request.params.id
   anecdotes = anecdotes.filter((anecdote) => anecdote.id !== id)
 
@@ -71,7 +71,7 @@ app.delete('/api/anecdotes/:id', (request, response) => {
   response.send('Anecdote removed')
 })
 
-app.post('/api/anecdotes', (request, response) => {
+app.post('/anecdotes', (request, response) => {
   const id = uuidv4()
   const anecdote = {
     id: id,
@@ -82,7 +82,7 @@ app.post('/api/anecdotes', (request, response) => {
   response.status(200).json(anecdote)
 })
 
-app.put('/api/anecdotes/:id', (request, response) => {
+app.put('/anecdotes/:id', (request, response) => {
   const id = request.params.id
   const updatedAnecdote = request.body
 

@@ -1,25 +1,23 @@
-import axios from 'axios'
-
-const baseUrl = 'http://localhost:3001/api/anecdotes'
+import axios from '../util/apiClient'
 
 const getAll = async () => {
-  const response = await axios.get(baseUrl)
+  const response = await axios.get('/anecdotes')
   return response.data
 }
 
 const createNew = async (content) => {
   const object = { content, votes: 0 }
-  const response = await axios.post(baseUrl, object)
+  const response = await axios.post('/anecdotes', object)
   return response.data
 }
 
 const update = async (id, newObject) => {
-  const request = axios.put(`${baseUrl}/${id}`, newObject)
+  const request = axios.put(`anecdotes/${id}`, newObject)
   return request.then((response) => response.data)
 }
 
 const remove = async (id) => {
-  const request = await axios.delete(`${baseUrl}/${id}`)
+  const request = await axios.delete(`anecdotes/${id}`)
   return request.data
 }
 
